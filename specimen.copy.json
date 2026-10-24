@@ -1,0 +1,106 @@
+{
+  "product": "Pace",
+  "headline": "One design system for every Pace product",
+  "subhead": "Pace gives product designers and engineers shared components, tokens and guidelines so financial interfaces stay consistent across web and mobile.",
+  "cta": "Browse components",
+  "secondaryCta": "Read the guidelines",
+  "note": "Free for all Pace Capital teams.",
+  "nav": [
+    "Overview",
+    "Components",
+    "Tokens",
+    "Patterns",
+    "Releases"
+  ],
+  "pageTitle": "Component library",
+  "pageSummary": "142 components are published, and 9 of them have changes waiting for accessibility review.",
+  "primaryAction": "Publish release",
+  "done": "Release published",
+  "statusLabel": "In review",
+  "metrics": [
+    {
+      "label": "Components",
+      "value": "142"
+    },
+    {
+      "label": "Adoption rate",
+      "value": "87%"
+    },
+    {
+      "label": "Open issues",
+      "value": "23"
+    }
+  ],
+  "table": {
+    "columns": [
+      "Component",
+      "Used in",
+      "Instances",
+      "Status"
+    ],
+    "rows": [
+      {
+        "name": "Button",
+        "detail": "Web, iOS, Android",
+        "value": "4,812 uses",
+        "status": "ok"
+      },
+      {
+        "name": "Data table",
+        "detail": "Web, Advisor portal",
+        "value": "1,206 uses",
+        "status": "review"
+      },
+      {
+        "name": "Currency input",
+        "detail": "Web, iOS",
+        "value": "874 uses",
+        "status": "ok"
+      },
+      {
+        "name": "Trade confirmation modal",
+        "detail": "Web, iOS, Android",
+        "value": "319 uses",
+        "status": "review"
+      }
+    ]
+  },
+  "chat": {
+    "question": "Which components still use the old color tokens?",
+    "tool": "search_token_usage",
+    "toolArgs": "token: color.legacy.*, scope: all_products",
+    "answer": "31 components still reference legacy color tokens, mostly in the Advisor portal. Data table and Date picker account for 18 of those references.",
+    "followUp": "Do you want me to open migration tickets for them?"
+  },
+  "code": {
+    "comment": "# Install the Pace tokens package and build platform outputs",
+    "command": "npm install @pace-capital/tokens@4.2.0 && npx pace-tokens build --platforms web,ios,android"
+  },
+  "sms": [
+    {
+      "from": "business",
+      "text": "Hi Dana, the Pace design system v4.2 is live. The updated Data table is ready for you to try in staging."
+    },
+    {
+      "from": "customer",
+      "text": "Thanks. Does it fix the keyboard focus issue on sortable headers?"
+    },
+    {
+      "from": "business",
+      "text": "Yes, focus order and visible focus rings were fixed in 4.2. Release notes are in the Releases tab."
+    }
+  ],
+  "card": {
+    "title": "Release 4.2.0",
+    "body": "12 components updated, 3 deprecated",
+    "metric": "87% adoption"
+  },
+  "decision": {
+    "label": "Q4 plan",
+    "title": "Approve the Q4 plan?",
+    "body": "Three projects need a decision by Friday.",
+    "approve": "Approve",
+    "decline": "Not now",
+    "command": "pace approve q4 --notify"
+  }
+}
